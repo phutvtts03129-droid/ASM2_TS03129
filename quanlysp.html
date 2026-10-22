@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm - Green Mart</title>
+
+    <link rel="stylesheet" href="quanly.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">🥬 Green Mart</div>
+        <div class="admin">Trang quản trị</div>
+    </header>
+
+    <main class="container">
+
+        <div class="page-title">
+            <div>
+                <h1>Quản lý sản phẩm</h1>
+                <p>Quản lý danh sách rau củ quả của cửa hàng</p>
+            </div>
+
+            <div class="title-icon">📦</div>
+        </div>
+
+        <section class="form-card">
+
+            <div class="card-title">
+                <div class="title-icon-small">📝</div>
+                <div>
+                    <h2>Thông tin sản phẩm</h2>
+                    <p>Nhập thông tin để thêm hoặc cập nhật sản phẩm</p>
+                </div>
+            </div>
+
+            <div class="search-box">
+                <label for="id">Mã sản phẩm (ID)</label>
+
+                <div class="search-row">
+                    <input type="number" id="id"
+                        placeholder="Nhập ID sản phẩm">
+
+                    <button class="btn-search" onclick="hienThiTheoID()">
+                        🔍 Tìm theo ID
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="ten">Tên sản phẩm</label>
+                    <input type="text" id="ten"
+                        placeholder="Ví dụ: Cà rốt Đà Lạt">
+                </div>
+
+                <div class="form-group">
+                    <label for="gia">Giá bán (VNĐ)</label>
+                    <input type="number" id="gia"
+                        placeholder="Nhập giá bán">
+                </div>
+
+                <div class="form-group">
+                    <label for="donVi">Đơn vị</label>
+                    <input type="text" id="donVi"
+                        placeholder="Ví dụ: kg, bó, hộp">
+                </div>
+
+                <div class="form-group">
+                    <label for="danhMuc">Danh mục</label>
+                    <select id="danhMuc">
+                        <option value="">-- Chọn danh mục --</option>
+                        <option value="rau">Rau</option>
+                        <option value="cu">Củ</option>
+                        <option value="trai-cay">Trái cây</option>
+                        <option value="nam">Nấm</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="anh">Đường dẫn hình ảnh</label>
+                    <input type="text" id="anh"
+                        placeholder="Nhập link hình ảnh sản phẩm">
+                </div>
+
+                <div class="form-group">
+                    <label for="sold">Số lượng đã bán</label>
+                    <input type="number" id="sold"
+                        placeholder="Nhập số lượng đã bán">
+                </div>
+
+            </div>
+
+            <div class="button-group">
+                <button class="btn-add" onclick="them()">
+                    ＋ Thêm sản phẩm
+                </button>
+
+                <button class="btn-edit" onclick="sua()">
+                    ✏️ Cập nhật
+                </button>
+
+                <button class="btn-delete" onclick="xoa()">
+                    🗑 Xóa sản phẩm
+                </button>
+            </div>
+
+        </section>
+
+        <section class="list-card">
+
+            <div class="list-header">
+                <div>
+                    <h2>Danh sách sản phẩm</h2>
+                    <p>Các sản phẩm hiện có trong cửa hàng</p>
+                </div>
+
+                <span class="list-label">Green Mart</span>
+            </div>
+
+            <div id="list" class="product-list"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 Green Mart - Hệ thống quản lý sản phẩm
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
